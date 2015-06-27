@@ -1,1 +1,1 @@
-web: babynames-server --listen=":$PORT" --uri="$MONGOLAB_URI"
+web: namestats-server --listen=":$PORT" --uri="$MONGOLAB_URI"
