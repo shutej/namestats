@@ -1,0 +1,121 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'PT Sans', sans-serif;
+  max-width: 1200px;
+}
+
+input {
+  -webkit-font-smoothing: inherit;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.result {
+  border-radius: 3px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 5px lightgray;
+  box-sizing: border-box;
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.result h1 {
+  margin: 0 0 10px 0;
+}
+
+.namesearch {
+  margin: 0 0 0 20px;
+}
+
+.namesearch .none::before {
+  content: "No results."
+}
+
+.namesearch .start::before {
+  content: "Results "
+}
+
+.namesearch .end::before {
+  content: "-"
+}
+
+.namesearch .total::before {
+  content: " of "
+}
+
+.name {
+  cursor: pointer;
+}
+
+ul.related-names {
+  margin: 0;
+  min-height: 1em;
+  padding: 0;
+}
+
+.related-names li {
+  display: inline-block;
+  list-style-type: none;
+  padding-right: 10px;
+}
+
+.total-count {
+  font-weight: bold;
+  position: relative;
+  float: right;
+}
+
+.male {
+  color: deepskyblue;
+}
+
+.male::before {
+  color: deepskyblue;
+  content: "♂";
+  font-family: monospace;
+  font-size: 32px;
+  padding-right: 10px;
+}
+
+.female {
+  color: deeppink;
+}
+
+.female::before {
+  color: deeppink;
+  content: "♀";
+  font-family: monospace;
+  font-size: 32px;
+  padding-right: 10px;
+}
+
+.bar-graph {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bar-graph .caption {
+  fill-opacity: 0.0;
+}
+
+.bar-graph .bar {
+  fill: darkgray;
+}
+
+.total-count {
+  margin: 0 0 0 20px;
+}
+
+.total-count::after {
+  font-weight: bold;
+  content: " total births.";
+}

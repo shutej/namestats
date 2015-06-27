@@ -1,0 +1,58 @@
+{
+	"ImportPath": "github.com/shutej/babynames",
+	"GoVersion": "go1.4",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "code.google.com/p/cascadia",
+			"Comment": "null-31",
+			"Rev": "5d796540e3cb93ea0556c897e6a3c7690f614d35"
+		},
+		{
+			"ImportPath": "github.com/PuerkitoBio/goquery",
+			"Comment": "v0.3.2-66-g12a46cd",
+			"Rev": "12a46cd4a183cabd212b37144cf4df55454cf1b8"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/contrib/gzip",
+			"Rev": "915fc6822dbf9137dafbd7f65cd7a58f5260d35b"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/contrib/static",
+			"Rev": "915fc6822dbf9137dafbd7f65cd7a58f5260d35b"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v1.0rc1-104-g1a7ab6e",
+			"Rev": "1a7ab6e4d5fdc72d6df30ef562102ae6e0d18518"
+		},
+		{
+			"ImportPath": "github.com/manucorporat/sse",
+			"Rev": "c142f0f1baea5cef7f98a8a6c222f6134368c1f5"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Rev": "d67e0b7d1797975196499f79bcc322c08b9f218b"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "10576091dc82c9c109dddfb5ed77bdbbc87a9af8"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "10576091dc82c9c109dddfb5ed77bdbbc87a9af8"
+		},
+		{
+			"ImportPath": "gopkg.in/bluesuncorp/validator.v5",
+			"Comment": "v5.8.1",
+			"Rev": "27a1d3f1583676b710bb06faf4c8927dd941a893"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2015.01.24",
+			"Rev": "c6a7dce14133ccac2dcac3793f1d6e2ef048503a"
+		}
+	]
+}
