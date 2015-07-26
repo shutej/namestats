@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/shutej/babynames/helpers"
-	"github.com/shutej/babynames/models"
+	"github.com/shutej/namestats/helpers"
+	"github.com/shutej/namestats/models"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )

@@ -1,1 +1,1 @@
-package babynames
+package namestats

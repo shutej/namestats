@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/contrib/gzip"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
-	"github.com/shutej/babynames/service/namesearch"
+	"github.com/shutej/namestats/service/namesearch"
 	mgo "gopkg.in/mgo.v2"
 )
 
