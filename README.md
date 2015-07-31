@@ -31,6 +31,7 @@ To run the server locally:
 
 ```sh
 go generate ./...
+godep go install ./...
 namestats-server --listen=:8080 --uri=mongodb://localhost/namestats
 ```
 
