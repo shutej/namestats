@@ -11,8 +11,9 @@ import Svg as S exposing (..)
 import Svg.Attributes as SA exposing (..)
 import Task exposing (..)
 
--- These are stylistic options that control rendering... it's probably better
--- to get these in a different way.
+-- These are stylistic options that control rendering.
+-- TODO(shutej): It would be better to get these in a different way, especially
+-- if we want the UI to be responsive.
 options : GraphOptions
 options =
     { width      = 1178

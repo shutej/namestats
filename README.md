@@ -17,16 +17,15 @@ see statistics for a particular year!**
 There were 19903 births in 1980. (#18)
 ```
 
-This means for that year, 19,903 children of that sex were given that name, and
-there were 17 names that were more popular for that year.
+This caption means for 1980 there were 19,903 children of this sex given this
+name.  There were 17 names that were more popular in 1980.
 
 ![Screenshot showing separate time series for the popularity of `Jeremy` for boys and girls](images/namestats.png)
 
 ## Developing Locally
 
-Static assets are built with [Elm](http://elm-lang.org/install) and then
-minified with [uglifyjs](http://lisperator.net/uglifyjs/).  Data is served from
-[MongoDB](https://www.mongodb.org/downloads).
+Static assets are under [static](static).  Data is stored in
+[MongoDB](https://www.mongodb.org/downloads) and served from there.
 
 To run the server locally:
 
