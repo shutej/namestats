@@ -1,3 +1,4 @@
+// This is the namestats-server command.  See README.md for details.
 package main
 
 import (

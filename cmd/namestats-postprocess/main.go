@@ -1,3 +1,4 @@
+// This is the namestats-postprocess command.  See README.md for details.
 package main
 
 import (
@@ -28,6 +29,13 @@ func main() {
 
 	names := []models.Name{}
 	c.Find(nil).All(&names)
+
+	// Clear everything first, making this an idempotent update.
+	for i := 0; i < len(names); i++ {
+		names[i].LowerName = ""
+		names[i].TotalCount = 0
+		names[i].RelatedNames = nil
+	}
 
 	for i := 0; i < len(names); i++ {
 		a := strings.ToLower(names[i].Name)

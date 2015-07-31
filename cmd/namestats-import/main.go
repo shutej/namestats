@@ -1,3 +1,4 @@
+// This is the namestats-import command.  See README.md for details.
 package main
 
 import (
@@ -71,50 +72,54 @@ func (self PopularNames) Year(year int) (SSA, error) {
 
 	retval := SSA{}
 
-	doc.FindMatcher(trMatcher).Slice(1, 1001).EachWithBreak(func(row int, rowSel *goquery.Selection) bool {
-		mf := MF{
-			M: Record{
-				Year: year,
-			},
-			F: Record{
-				Year: year,
-			},
-		}
-
-		rowSel.FindMatcher(thMatcher).EachWithBreak(func(col int, colSel *goquery.Selection) bool {
-			switch col {
-			case 0:
-				if rank, err := parseSelection(colSel); err != nil {
-					return false
-				} else {
-					mf.M.Rank = rank
-					mf.F.Rank = rank
-				}
-			case 1:
-				mf.M.Name = colSel.Text()
-			case 2:
-				mf.M.Count, err = parseSelection(colSel)
-				if err != nil {
-					return false
-				}
-			case 3:
-				mf.F.Name = colSel.Text()
-			case 4:
-				mf.F.Count, err = parseSelection(colSel)
-				if err != nil {
-					return false
-				}
+	// We asked for 1000 rows.  We skip the first row, and the last row is non-inclusive.
+	doc.FindMatcher(trMatcher).Slice(1, 1001).EachWithBreak(
+		func(row int, rowSel *goquery.Selection) bool {
+			mf := MF{
+				M: Record{
+					Year: year,
+				},
+				F: Record{
+					Year: year,
+				},
 			}
+
+			// See the example input above to understand column position.
+			rowSel.FindMatcher(thMatcher).EachWithBreak(
+				func(col int, colSel *goquery.Selection) bool {
+					switch col {
+					case 0:
+						if rank, err := parseSelection(colSel); err != nil {
+							return false
+						} else {
+							mf.M.Rank = rank
+							mf.F.Rank = rank
+						}
+					case 1:
+						mf.M.Name = colSel.Text()
+					case 2:
+						mf.M.Count, err = parseSelection(colSel)
+						if err != nil {
+							return false
+						}
+					case 3:
+						mf.F.Name = colSel.Text()
+					case 4:
+						mf.F.Count, err = parseSelection(colSel)
+						if err != nil {
+							return false
+						}
+					}
+					return true
+				})
+
+			if err != nil {
+				return false
+			}
+
+			retval = append(retval, mf)
 			return true
 		})
-
-		if err != nil {
-			return false
-		}
-
-		retval = append(retval, mf)
-		return true
-	})
 
 	if err != nil {
 		return nil, err
