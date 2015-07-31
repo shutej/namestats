@@ -9,9 +9,9 @@ first request can take several seconds to spin up a dyno.
 I wrote this to research names for my daughter.  We named her
 [Isla](http://namestats.herokuapp.com/#isla).
 
-This package project draws its name statistics from the Social Security
-administration.  It shows you popularity over time.  **Hover over each bar to
-see statistics for a particular year!**
+This project draws its name statistics from the Social Security Administration.
+It shows you popularity over time.  **Hover over each bar to see statistics for
+a particular year!**
 
 ```
 There were 19903 births in 1980. (#18)
